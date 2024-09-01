@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справка</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .tree {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .tree ul {
+            padding-left: 20px;
+        }
+        .tree li {
+            list-style-type: none;
+            margin: 0;
+            padding: 10px 0;
+            position: relative;
+        }
+        .tree li::before, .tree li::after {
+            content: '';
+            position: absolute;
+            left: -20px;
+        }
+        .tree li::before {
+            border-left: 1px solid #ccc;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+        }
+        .tree li::after {
+            border-top: 1px solid #ccc;
+            top: 15px;
+            width: 20px;
+        }
+        .tree li span {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+            cursor: pointer;
+        }
+        .tree li span:hover {
+            background-color: #dee2e6;
+        }
+        .tree li ul {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tree">
+        <ul>
+            <li>
+                <span>Меню</span>
+                <ul>
+                    <li>
+                        <span>Файл</span>
+                        <ul>
+                            <li>Создать: Создает новый файл для редактирования.</li>
+                            <li>Открыть: Открывает существующий файл для редактирования.</li>
+                            <li>Сохранить: Сохраняет текущий текст в файле. Если файл уже существует, он перезаписывается.</li>
+                            <li>Сохранить как: Сохраняет текущий текст в новом файле.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>Правка</span>
+                        <ul>
+                            <li>Отмена (Undo): Отменяет последнее действие (текстовое изменение).</li>
+                            <li>Повтор (Redo): Возвращает отмененное действие.</li>
+                            <li>Очистить: Очищает содержимое текстового редактора.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
